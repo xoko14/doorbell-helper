@@ -27,7 +27,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "ic_launcher.ico"
+        "icon": "icon.ico"
       },
       "makers": [
         {
