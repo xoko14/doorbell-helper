@@ -12,7 +12,7 @@
 <body>
     <nav>
         <div class="nav-wrapper light-blue darken-3">
-            <a href="#" class="brand-logo center">Doorbell Player</a>
+            <a class="brand-logo center">Doorbell Player</a>
         </div>
     </nav>
 
@@ -35,6 +35,17 @@
         <br>
         <div class="col s12">
             <a class="waves-effect waves-light btn purple darken-1" id="toneButton" onclick="playCode();">PLAY</a>
+        </div>
+        <br>
+        <br>
+        <div class="card" style="width: 100%;">
+            <div class="card-content">
+                <span class="card-title">How to</span>
+                <p>Follow the insrtuctions from Jules Conroy's video (linked below). PLEASE USE COMMAS.</p>
+            </div>
+            <div class="card-action">
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://youtu.be/RXWSx0mg1TA');">How to video</a>
+            </div>
         </div>
 
         <script>
