@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Doorbell player</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <input type="text" id="toneInput" style="margin: 0 auto">
+    <br>
+    <select name="tempo" id="tempo" style="margin: 0 auto">
+        <option value="60">Slow</option>
+        <option value="120">Normal</option>
+        <option value="240">Fast</option>
+      </select>
+      <br>
+    <button id="toneButton" onclick="playCode();" style="margin: 0 auto">PLAY</button>
+    <script src="tone-player.js"></script>
+</body>
+</html>
