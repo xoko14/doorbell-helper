@@ -1,4 +1,8 @@
 const { app, BrowserWindow } = require('electron')
+window.$ = window.jQuery = require('jquery')
+//require('hammerjs');
+require('materialize-css');
+require('tone');
 
 function createWindow () {
   const win = new BrowserWindow({

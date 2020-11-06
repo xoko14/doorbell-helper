@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>Doorbell player</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 <body>
-    <input type="text" id="toneInput" style="margin: 0 auto">
+    <input type="text" id="toneInput">
     <br>
-    <select name="tempo" id="tempo" style="margin: 0 auto">
+    <select name="tempo" id="tempo">
         <option value="60">Slow</option>
-        <option value="120">Normal</option>
+        <option value="120" selected>Normal</option>
         <option value="240">Fast</option>
       </select>
       <br>
-    <button id="toneButton" onclick="playCode();" style="margin: 0 auto">PLAY</button>
+    <button id="toneButton" onclick="playCode();">PLAY</button>
     <script src="tone-player.js"></script>
 </body>
 </html>

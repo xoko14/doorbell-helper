@@ -14,7 +14,7 @@ function playCode() {
     var nextN = 0;
     
 
-    Tone.Transport.schedule((time) => {
+    Tone.Transport.scheduleOnce((time) => {
 
         Tone.Transport.bpm.value = parseInt(document.getElementById("tempo").value);
         //synth.sync();
@@ -111,8 +111,8 @@ function playCode() {
         }
     }/*, `${i}m`*/);
     if (Tone.Transport.state != 'stopped') {
-        Tone.Transport.stop();
+        Tone.Transport.stop("+0.1");
     }
-    Tone.Transport.start();
+    Tone.Transport.start("+0.1");
 
 }
