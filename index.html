@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Doorbell player</title>
+    <title>Doorbell Player</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 </head>
+
 <body>
-    <input type="text" id="toneInput">
-    <br>
-    <select name="tempo" id="tempo">
-        <option value="60">Slow</option>
-        <option value="120" selected>Normal</option>
-        <option value="240">Fast</option>
-      </select>
-      <br>
-    <button id="toneButton" onclick="playCode();">PLAY</button>
-    <script src="tone-player.js"></script>
+    <nav>
+        <div class="nav-wrapper light-blue darken-3">
+            <a href="#" class="brand-logo center">Doorbell Player</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="toneInput" class="materialize-textarea"></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="input-field col s12">
+            <select name="tempo" id="tempo">
+                <option value="60">Slow (60 BPM)</option>
+                <option value="120" selected>Medium (120 BPM)</option>
+                <option value="240">Fast (240 BPM)</option>
+            </select>
+        </div>
+        <br>
+        <div class="col s12">
+            <a class="waves-effect waves-light btn purple darken-1" id="toneButton" onclick="playCode();">PLAY</a>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+            });
+        </script>
+        <script src="tone-player.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+    </div>
 </body>
+
 </html>

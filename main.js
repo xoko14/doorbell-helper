@@ -1,8 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-window.$ = window.jQuery = require('jquery')
-//require('hammerjs');
-require('materialize-css');
-require('tone');
+require('tone')
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -15,6 +12,7 @@ function createWindow () {
 
   win.loadFile('index.html')
   win.webContents.openDevTools()
+  win.setMenuBarVisibility(false)
 }
 
 app.whenReady().then(createWindow)

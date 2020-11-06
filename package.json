@@ -13,9 +13,7 @@
     "electron": "^10.1.5"
   },
   "dependencies": {
-    "hammerjs": "^2.0.8",
     "jquery": "^3.5.1",
-    "materialize-css": "^1.0.0-rc.2",
     "tone": "^14.7.58"
   }
 }
